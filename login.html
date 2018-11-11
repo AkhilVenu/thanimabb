@@ -4,7 +4,7 @@
 	<title>Thanima</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/blood_drop_1.png"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -14,13 +14,13 @@
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
@@ -28,7 +28,7 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
+
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-t-85 p-b-20">
@@ -40,18 +40,18 @@
 						<img src="images/icons/blood_drop_1.png" alt="AVATAR">
 					</span>
 
-					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-						<input class="input100" type="text" name="username">
+					<div  id = "login_div" class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
+						<input class="input100" type="text" id="email_field">
 						<span class="focus-input100" data-placeholder="Username"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-						<input class="input100" type="password" name="pass">
+						<input class="input100" type="password" id="password_field">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button onclick = "login()"  class="login100-form-btn" >
 							Login
 						</button>
 					</div>
@@ -81,10 +81,42 @@
 			</div>
 		</div>
 	</div>
-	
+
+
+
 
 	<div id="dropDownSelect1"></div>
-	
+
+
+	<div id = "user_div" >
+	<h3> Welcome User </h3>
+	<p>Welcome to Thanima User Portal.You are currently Logged in </p>
+	<div class="container-login100-form-btn">
+		<button  onclick = "logout()"  class="login100-form-btn" >
+			Logout
+		</button>
+	</div>
+	</div>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD2Eejjx1N2US7RqKWOLQPCTsuwIV5fImY",
+    authDomain: "thanima-e3292.firebaseapp.com",
+    databaseURL: "https://thanima-e3292.firebaseio.com",
+    projectId: "thanima-e3292",
+    storageBucket: "thanima-e3292.appspot.com",
+    messagingSenderId: "238714638410"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+<script src = "js/login.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
