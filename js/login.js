@@ -8,7 +8,7 @@ window.location = "portal.html";
     // No user is signed in.
 
 	
-	document.getElementById("login_div").style.display = "block" ;
+	
   }
 });
 
