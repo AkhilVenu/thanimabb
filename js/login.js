@@ -25,7 +25,7 @@ function login() {
   var errorCode = error.code;
   var errorMessage = error.message;
 
-  window.alert ( "Error : " + Keep Trying you will Win!!!);
+  window.alert ( "Error : " + "Keep Trying you will Win!!!");
   // ...
   });
 
