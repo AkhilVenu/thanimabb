@@ -2,7 +2,7 @@
   if (user) {
     // User is signed in.
 
-	document.getElementById("user_div").style.display = "block" ;
+	document.getElementById("user_div").style.display = "initial" ;
 	document.getElementById("login_div").style.display = "none" ;
   }
 
